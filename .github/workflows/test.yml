@@ -16,3 +16,8 @@ jobs:
           print("Hello World")
           print(platform.processor())
         shell: python
+  run-powershell-command:
+    runs-on: windows-latest
+    steps:
+      - name: get location
+        run: Get-Location
