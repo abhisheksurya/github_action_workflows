@@ -10,3 +10,15 @@ jobs:
         run: |
           node -v
           npm -v
+      - name: python command
+        run: |
+          import platform
+          print("Hello World")
+          print(platform.processor())
+        shell: python
+  run-powershell-command:
+    runs-on: windows-latest
+    needs: [run-shell-command]
+    steps:
+      - name: get location
+        run: Get-Location
