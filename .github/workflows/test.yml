@@ -13,5 +13,6 @@ jobs:
       - name: python command
         run: |
           import platform
+          print("Hello World")
           print(platform.processor())
         shell: python
